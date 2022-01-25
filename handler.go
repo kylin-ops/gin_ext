@@ -174,6 +174,7 @@ func (c *Context) gRequest(url, method string, options ...*grequest.RequestOptio
 	}
 	option.Header["traceId"] = traceID
 	option.Header["spanId"] = spanID
+	option.Header["app_name"] = AppName
 
 	if LogDebug {
 		bodyData, _ := json.Marshal(option.Data)
