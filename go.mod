@@ -1,4 +1,4 @@
-module github.com/kylin-ops/gin_exit
+module github.com/kylin-ops/gin_ext
 
 go 1.16
 

@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/kylin-ops/gin_exit/grequest"
+	"github.com/kylin-ops/gin_ext/grequest"
 	"io/ioutil"
 	"math/rand"
 	"net/http"

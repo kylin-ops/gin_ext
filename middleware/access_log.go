@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"encoding/json"
-	"github.com/kylin-ops/gin_exit"
+	"github.com/kylin-ops/gin_ext"
 
 	"github.com/google/uuid"
 

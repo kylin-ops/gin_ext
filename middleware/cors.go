@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"github.com/kylin-ops/gin_exit"
+	"github.com/kylin-ops/gin_ext"
 	"log"
 	"net/http"
 )
