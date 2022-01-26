@@ -38,8 +38,8 @@ func RandStr(l int) string {
 }
 
 var (
-	Logger  *logrus.Logger
-	SLogger *logrus.Logger
+	JLogger  *logrus.Logger
+	SLogger  *logrus.Logger
 	AppName string
 	Host    string
 	Ip      string
@@ -105,7 +105,7 @@ func (c *Context) Logger(logType, level, msg string, args ...interface{}) {
 		)
 		msg = info + msg
 	}
-	jlogger := Logger.WithFields(jfields)
+	jlogger := JLogger.WithFields(jfields)
 	slogger := SLogger.WithFields(sfields)
 	switch level {
 	case "info":
