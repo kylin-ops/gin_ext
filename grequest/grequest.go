@@ -14,6 +14,8 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/gin-gonic/gin"
 )
 
 var version = "0.1"
@@ -40,6 +42,10 @@ type RequestOptions struct {
 type responseBody struct {
 	Code interface{} `json:"code"`
 	Msg  string      `json:"msg"`
+}
+
+func NewEngine() *gin.Engine{
+	return gin.New()
 }
 
 func ResponseIsError(data []byte) error {
