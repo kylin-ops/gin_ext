@@ -42,7 +42,6 @@ type responseBody struct {
 	Msg  string      `json:"msg"`
 }
 
-// 根据接口规范判断api响应请求是否错误，https://wiki.dotfashion.cn/pages/viewpage.action?pageId=513081416
 func ResponseIsError(data []byte) error {
 	var body = responseBody{Code: "1"}
 	err := json.Unmarshal(data, &body)
