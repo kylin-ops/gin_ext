@@ -17,23 +17,22 @@ type Options struct {
 	Count        int    `yaml:"count" json:"count"`
 }
 
-
-func NewLogger(o *Options){
+func NewLogger(o *Options) {
 	joption := jlog.Options{
-		Console: o.Console,
-		File: o.File,
-		Level: o.Level,
-		Path: o.Path + ".json.log",
+		Console:      o.Console,
+		File:         o.File,
+		Level:        o.Level,
+		Path:         o.Path + ".json.log",
 		RollbackTime: o.RollbackTime,
-		Count: o.Count,
+		Count:        o.Count,
 	}
 	soption := slog.LogOption{
-		Console: o.Console,
-		File: o.File,
-		Level: o.Level,
-		Path: o.Path,
+		Console:      o.Console,
+		File:         o.File,
+		Level:        o.Level,
+		Path:         o.Path,
 		RollbackTime: o.RollbackTime,
-		Count: o.Count,
+		Count:        o.Count,
 	}
 	jlogger, err := jlog.NewLogger(&joption)
 	if err != nil {
